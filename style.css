@@ -70,6 +70,7 @@ a {
     padding: 5px 30px;
 }
 
+.search-bar input[type="submit"],
 .search-bar button {
     background-color: orange;
     border-radius: 5px;
@@ -77,6 +78,13 @@ a {
     padding: 5px;
     outline: 0;
     border: 0;
+}
+
+.search-bar input[type="text"]::placeholder {
+    color: grey;
+}
+.search-bar input[type="text"] {
+    margin-bottom: 0;
 }
 
 .search-bar input {
