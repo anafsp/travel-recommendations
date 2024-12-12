@@ -89,6 +89,8 @@ h1 {
     font-size: 50px;
     text-transform: uppercase;
 }
+
+input[type="submit"],
 button {
     background-color: white;
     color: black;
@@ -208,4 +210,30 @@ button {
 .team__member img {
     width: 30px;
     height: auto;
+}
+
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    max-width: 550px;
+}
+
+textarea,
+input[type="text"],
+input[type="email"] {
+    background-color: rgba(255,255,255, 0.1);
+    border: 1px solid white;
+    margin-bottom: 10px;
+    padding: 10px;
+}
+
+textarea {
+    min-height: 150px;
+}
+
+textarea::placeholder,
+input[type="text"]::placeholder,
+input[type="email"]::placeholder {
+    color: white;
 }
