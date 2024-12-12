@@ -31,6 +31,14 @@ a {
     text-decoration: none;
 }
 
+.nav a:hover {
+    text-decoration: underline;
+}
+
+.nav a.active {
+    color: orange;
+}
+
 .nav__menu {
     list-style: none;
     display: flex;
@@ -76,39 +84,11 @@ a {
     min-width: 250px;
 }
 
-.home-container {
-    position: relative;
-    background-image: url('https://www.startpage.com/av/proxy-image?piurl=https%3A%2F%2Fa.cdn-hotels.com%2Fgdcs%2Fproduction146%2Fd585%2Faa60115c-bdfc-479f-88ba-5cb0f15a5af8.jpg&sp=1734027618T33feb239c3d814990785f9cb356a57e172acd478da00da23f0b1598952c33557');
-    background-position: center center;
-    background-size: cover;
-    width: 100%;
-    min-height: 100vh;
-}
-
-.home-container__fade {
-    position: absolute;
-    inset: 0;
-    background: rgb(255,134,0);
-    background: linear-gradient(90deg, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.05) 100%);
-}
-
-.home-container__intro {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding-top: 100px;
-    padding-left: 150px;
-    width: 30%;
-    color: white;
-    z-index: 2;
-    align-items: flex-start;
-}
-.home-container h1 {
+h1 {
     font-size: 50px;
     text-transform: uppercase;
 }
-.home-container button {
+button {
     background-color: white;
     color: black;
     border-radius: 5px;
@@ -116,14 +96,14 @@ a {
     border: lightgrey;
     width: auto;
     min-width: initial;
-    margin-top: 30px;
 }
 
-.home-container__social {
+.social-section {
     position: absolute;
     left: 20px;
     top: 150px;
     display: flex;
+    z-index: 10;
     flex-direction: column;
     padding-top: 300px;
 }
@@ -145,7 +125,7 @@ a {
     fill: white;
 }
 
-.home-container__social:before {
+.social-section:before {
     content: '';
     position: absolute;
     left: 15px;
@@ -153,4 +133,66 @@ a {
     top: 50px;
     height: 200px;
     background-color: white;
+}
+
+
+
+.page-container {
+    position: relative;
+    background-image: url('https://www.startpage.com/av/proxy-image?piurl=https%3A%2F%2Fa.cdn-hotels.com%2Fgdcs%2Fproduction146%2Fd585%2Faa60115c-bdfc-479f-88ba-5cb0f15a5af8.jpg&sp=1734027618T33feb239c3d814990785f9cb356a57e172acd478da00da23f0b1598952c33557');
+    background-position: center center;
+    background-size: cover;
+    width: 100%;
+    min-height: 100vh;
+    padding-left: 150px;
+    padding-right: 150px;
+    color: white;
+}
+.page-container > * {
+    position: relative;
+    z-index: 1;
+}
+
+.page-container__fade {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.05) 100%);
+}
+
+.page-container__intro {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-top: 100px;
+    max-width: 850px;
+    align-items: flex-start;
+}
+
+.page-container button {
+    margin-top: 30px;
+}
+
+.team {
+    display: flex;
+
+}
+
+.team__member {
+    flex-basis: 25%;
+}
+
+.team__member-highlight {
+    background-color: orange;
+    padding: 5px 10px;
+    margin-top: 10px;
+    display: inline-block;
+    border-radius: 2px;
+    color: black;
+}
+
+.team__member img {
+    width: 30px;
+    height: auto;
 }
