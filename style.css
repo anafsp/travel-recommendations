@@ -14,6 +14,11 @@ a {
 }
 
 .nav {
+    position: fixed;
+    z-index: 100;
+    left: 0;
+    right: 0;
+    top: 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -53,7 +58,7 @@ a {
     background-color: white;
     color: orange;
     border-radius: 30px;
-    padding: 10px 30px;
+    padding: 5px 30px;
 }
 
 .search-bar button {
@@ -69,4 +74,83 @@ a {
     border: 0;
     outline: 0;
     min-width: 250px;
+}
+
+.home-container {
+    position: relative;
+    background-image: url('https://www.startpage.com/av/proxy-image?piurl=https%3A%2F%2Fa.cdn-hotels.com%2Fgdcs%2Fproduction146%2Fd585%2Faa60115c-bdfc-479f-88ba-5cb0f15a5af8.jpg&sp=1734027618T33feb239c3d814990785f9cb356a57e172acd478da00da23f0b1598952c33557');
+    background-position: center center;
+    background-size: cover;
+    width: 100%;
+    min-height: 100vh;
+}
+
+.home-container__fade {
+    position: absolute;
+    inset: 0;
+    background: rgb(255,134,0);
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.05) 100%);
+}
+
+.home-container__intro {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-top: 100px;
+    padding-left: 150px;
+    width: 30%;
+    color: white;
+    z-index: 2;
+    align-items: flex-start;
+}
+.home-container h1 {
+    font-size: 50px;
+    text-transform: uppercase;
+}
+.home-container button {
+    background-color: white;
+    color: black;
+    border-radius: 5px;
+    padding: 10px 20px;
+    border: lightgrey;
+    width: auto;
+    min-width: initial;
+    margin-top: 30px;
+}
+
+.home-container__social {
+    position: absolute;
+    left: 20px;
+    top: 150px;
+    display: flex;
+    flex-direction: column;
+    padding-top: 300px;
+}
+
+.social-icon {
+    width: 25px;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.social-icon svg {
+    width: 100%;
+    height: auto;
+}
+
+.social-icon path,
+.social-icon rect,
+.social-icon polygon {
+    fill: white;
+}
+
+.home-container__social:before {
+    content: '';
+    position: absolute;
+    left: 15px;
+    width: 1px;
+    top: 50px;
+    height: 200px;
+    background-color: white;
 }
