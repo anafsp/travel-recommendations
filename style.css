@@ -150,7 +150,7 @@ button {
 
 .page-container {
     position: relative;
-    background-image: url('https://www.startpage.com/av/proxy-image?piurl=https%3A%2F%2Fa.cdn-hotels.com%2Fgdcs%2Fproduction146%2Fd585%2Faa60115c-bdfc-479f-88ba-5cb0f15a5af8.jpg&sp=1734027618T33feb239c3d814990785f9cb356a57e172acd478da00da23f0b1598952c33557');
+    background-image: url('https://plus.unsplash.com/premium_photo-1669927131902-a64115445f0f?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8Y2lkYWRlJTIwbm90dXJuYXxlbnwwfHwwfHx8MA%3D%3D');
     background-position: center center;
     background-size: cover;
     width: 100%;
@@ -244,4 +244,46 @@ textarea::placeholder,
 input[type="text"]::placeholder,
 input[type="email"]::placeholder {
     color: white;
+}
+
+.search-results {
+    position: fixed;
+    top: 80px;
+    right: 0;
+    left: 60%;
+    bottom: 0;
+    overflow: auto;
+}
+
+.search-results__not-found {
+    text-align: center;
+    margin: 30px;
+}
+
+.card {
+    width: calc(100% - 20px* 2);
+    border-radius: 10px;
+    margin: 20px;
+    box-shadow: rgba(0, 0, 0, 1) 0px 5px 15px;
+    overflow: hidden;
+}
+
+.card img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    object-position: center;
+    background-color: orange;
+    display:block;
+}
+
+.card__text {
+    background-color: white;
+    color: black;
+    padding: 15px;
+}
+
+.card button {
+    background-color: orange;
+    color: black;
 }
