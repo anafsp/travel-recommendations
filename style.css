@@ -68,6 +68,12 @@ a {
     color: orange;
     border-radius: 30px;
     padding: 5px 30px;
+    display: flex;
+    align-items: center;
+}
+
+.search-bar form {
+    margin-right: 10px;
 }
 
 .search-bar input[type="submit"],

@@ -29,6 +29,10 @@ function getCardsHtml(data) {
 document.addEventListener("DOMContentLoaded", async () => {
     const data = await getDataFromApi();
 
+    document.querySelector('[data-search-clear]').addEventListener('click', () => {
+        document.querySelector('[data-search-results]').innerHTML = '';
+        document.querySelector('[data-form-search] input[type="text"]').value = '';
+    });
     let htmlResults;
     document.querySelector('[data-form-search]').addEventListener('submit', async e => {
         e.preventDefault();
